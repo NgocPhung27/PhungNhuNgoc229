@@ -16,5 +16,7 @@ namespace LTQL_1721050229.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
+
+        public System.Data.Entity.DbSet<LTQL_1721050229.Models.PNNSanPham229> PNNSanPham229 { get; set; }
     }
 }

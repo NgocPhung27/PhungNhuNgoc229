@@ -128,8 +128,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhaCungCap229Controller.cs" />
+    <Compile Include="Controllers\PNNSanPham229Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,6 +144,7 @@
       <DependentUpon>202112210623185_PNN.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\LTQLDbContext.cs" />
     <Compile Include="Models\NhaCungCap229.cs" />
     <Compile Include="Models\PNNSanPham229.cs" />
@@ -188,9 +191,15 @@
     <Content Include="Views\NhaCungCap229\Details.cshtml" />
     <Content Include="Views\NhaCungCap229\Edit.cshtml" />
     <Content Include="Views\NhaCungCap229\Index.cshtml" />
+    <Content Include="Views\PNNSanPham229\Create.cshtml" />
+    <Content Include="Views\PNNSanPham229\Delete.cshtml" />
+    <Content Include="Views\PNNSanPham229\Details.cshtml" />
+    <Content Include="Views\PNNSanPham229\Edit.cshtml" />
+    <Content Include="Views\PNNSanPham229\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
