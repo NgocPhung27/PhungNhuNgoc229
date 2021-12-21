@@ -39,7 +39,7 @@ namespace LTQL_1721050229.Controllers
         // GET: PNNSanPham229/Create
         public ActionResult Create()
         {
-            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCap229, "MaNhaCungCap", "TenNhaCungCap");
+            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace LTQL_1721050229.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCap229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
@@ -73,7 +73,7 @@ namespace LTQL_1721050229.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCap229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
@@ -90,7 +90,7 @@ namespace LTQL_1721050229.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCap229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
