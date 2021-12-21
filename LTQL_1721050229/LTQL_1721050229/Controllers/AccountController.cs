@@ -26,7 +26,7 @@ namespace LTQL_1721050229.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(Account acc, string returnUrl)
         {
-            if (acc.username == "admin" && acc.password == "123456")
+            if (acc.username == "Admin" && acc.password == "123456")
             {
                 FormsAuthentication.SetAuthCookie(acc.username, true);
                 return RedirectToLocal(returnUrl);
