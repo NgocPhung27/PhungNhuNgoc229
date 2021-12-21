@@ -15,10 +15,9 @@ namespace LTQL_1721050229.Models
         public DbSet<NhaCungCap229> NhaCungCaps{ get; set; }
         public DbSet<PNNSanPham229> PNNSanPham229s { get; set; }
         public DbSet<Account> Accounts { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
-
-        public System.Data.Entity.DbSet<LTQL_1721050229.Models.PNNSanPham229> PNNSanPham229 { get; set; }
     }
 }

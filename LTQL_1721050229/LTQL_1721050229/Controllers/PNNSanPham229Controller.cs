@@ -17,8 +17,8 @@ namespace LTQL_1721050229.Controllers
         // GET: PNNSanPham229
         public ActionResult Index()
         {
-            var pNNSanPham229 = db.PNNSanPham229.Include(p => p.NhaCungCap229);
-            return View(pNNSanPham229.ToList());
+            var pNNSanPham229s = db.PNNSanPham229s.Include(p => p.NhaCungCap229);
+            return View(pNNSanPham229s.ToList());
         }
 
         // GET: PNNSanPham229/Details/5
@@ -28,7 +28,7 @@ namespace LTQL_1721050229.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229.Find(id);
+            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229s.Find(id);
             if (pNNSanPham229 == null)
             {
                 return HttpNotFound();
@@ -39,7 +39,7 @@ namespace LTQL_1721050229.Controllers
         // GET: PNNSanPham229/Create
         public ActionResult Create()
         {
-            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap");
+            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCaps, "MaNhaCungCap", "TenNhaCungCap");
             return View();
         }
 
@@ -52,12 +52,12 @@ namespace LTQL_1721050229.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PNNSanPham229.Add(pNNSanPham229);
+                db.PNNSanPham229s.Add(pNNSanPham229);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCaps, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
@@ -68,12 +68,12 @@ namespace LTQL_1721050229.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229.Find(id);
+            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229s.Find(id);
             if (pNNSanPham229 == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCaps, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
@@ -90,7 +90,7 @@ namespace LTQL_1721050229.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaNhaCungCap = new SelectList(db.PNNSanPham229, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
+            ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCaps, "MaNhaCungCap", "TenNhaCungCap", pNNSanPham229.MaNhaCungCap);
             return View(pNNSanPham229);
         }
 
@@ -101,7 +101,7 @@ namespace LTQL_1721050229.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229.Find(id);
+            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229s.Find(id);
             if (pNNSanPham229 == null)
             {
                 return HttpNotFound();
@@ -114,8 +114,8 @@ namespace LTQL_1721050229.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229.Find(id);
-            db.PNNSanPham229.Remove(pNNSanPham229);
+            PNNSanPham229 pNNSanPham229 = db.PNNSanPham229s.Find(id);
+            db.PNNSanPham229s.Remove(pNNSanPham229);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
