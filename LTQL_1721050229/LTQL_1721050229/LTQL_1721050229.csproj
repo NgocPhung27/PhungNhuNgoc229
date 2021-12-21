@@ -137,9 +137,14 @@
     <Compile Include="Migrations\202112210613468_ltql.Designer.cs">
       <DependentUpon>202112210613468_ltql.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112210623185_PNN.cs" />
+    <Compile Include="Migrations\202112210623185_PNN.Designer.cs">
+      <DependentUpon>202112210623185_PNN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LTQLDbContext.cs" />
     <Compile Include="Models\NhaCungCap229.cs" />
+    <Compile Include="Models\PNNSanPham229.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +208,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202112210613468_ltql.resx">
       <DependentUpon>202112210613468_ltql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210623185_PNN.resx">
+      <DependentUpon>202112210623185_PNN.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
